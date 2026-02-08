@@ -11,11 +11,27 @@ export const getProjects = async (): Promise<Project[]> => {
   }
 };
 
-// export const createProject = async (project: Project) => {
-//   const res = await fetch(BASE_URL, {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(project),
-//   });
-//   return res.json();
-// };
+export const createProject = async (project: Project) => {
+  const res = await fetch(BASE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(project),
+  });
+  return res.json();
+};
+
+export const updateProject = async (project: Project) => {
+  const res = await fetch(BASE_URL, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(project),
+  });
+  return res.json();
+};
+
+export const deleteProject = async (id: number) => {
+  const res = await fetch(`${BASE_URL}?id=${id}`, {
+    method: "DELETE",
+  });
+  return res.json();
+};
