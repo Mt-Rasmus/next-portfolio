@@ -1,3 +1,4 @@
+import AboutIntroduction from "@/app/components/AboutIntroduction";
 import AboutCard from "@/app/components/AboutCard";
 import { type AboutItem } from "@/app/types/about";
 
@@ -15,7 +16,7 @@ const aboutData: AboutItem[] = [
   {
     title: "Animation & Storytelling",
     description:
-      "I run my own little 2D animation factory. I handle everything—writing the scripts, drawing the characters, doing the voices, and mixing the sound. It’s a lot of work, but I love the process of bringing a funny idea to life from scratch.",
+      "I run my own little 2D animation factory. I handle everything — writing the scripts, drawing the characters, doing the voices, and mixing the sound. It’s a lot of work, but I love the process of bringing a funny idea to life from scratch.",
     image: `${BASE_IMAGE_PATH}/cintiq2.jpg`,
     imageOrientation: "landscape",
     direction: "left",
@@ -41,14 +42,13 @@ const aboutData: AboutItem[] = [
 const AboutPage = () => {
   return (
     <div>
+      <AboutIntroduction />
       {aboutData.map((item, index) => (
-        <>
-          <AboutCard
-            key={index}
-            item={item}
-            isLastItem={index === aboutData.length - 1}
-          />
-        </>
+        <AboutCard
+          key={index}
+          item={item}
+          isLastItem={index === aboutData.length - 1}
+        />
       ))}
     </div>
   );

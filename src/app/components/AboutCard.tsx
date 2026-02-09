@@ -49,20 +49,20 @@ export default function AboutCard({
         : "row-reverse"};
     align-items: center;
     justify-content: center;
-    padding: 0 2rem;
+    padding: 4rem 2rem;
     gap: 1rem;
   `;
 
   const imageStyle = css`
     ${imageOrientation === "portrait"
       ? `
-      max-height: 400px;
-      width: auto;
-    `
+        height: 400px; 
+        width: auto;
+      `
       : `
-      max-width: 400px;
-      height: auto;
-    `}
+        width: 400px; 
+        height: auto;
+      `}
 
     transform: ${!isMobile
       ? isVisible
@@ -99,8 +99,7 @@ export default function AboutCard({
 
   const dividerStyle = css`
     border: none;
-    border-top: ${isLastItem ? "none" : "1px solid #ccc"};
-    margin: ${isLastItem ? "2rem 0" : "4rem 0"};
+    border-top: ${isLastItem ? "none" : "1px solid #d1d087"};
   `;
 
   return (
