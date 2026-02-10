@@ -4,7 +4,8 @@ import { createProject, updateProject } from "@/app/services/api";
 import { type Project } from "@/app/types/project";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button, Input, Textarea } from "@chakra-ui/react";
+import { Input, Textarea } from "@chakra-ui/react";
+import StyledButton from "./StyledButton";
 import { css } from "@emotion/react";
 import { montserrat } from "@/app/fonts";
 
@@ -127,9 +128,9 @@ export default function ProjectForm({
         }}
       />
       {urlError && <div css={errorMessageStyle}>{urlError}</div>}
-      <Button onClick={handleSubmit} disabled={submitDisabled}>
+      <StyledButton onClick={handleSubmit} disabled={submitDisabled}>
         {mode === "new" ? "Create Project" : "Update Project"}
-      </Button>
+      </StyledButton>
     </div>
   );
 }
