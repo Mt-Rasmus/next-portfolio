@@ -3,6 +3,7 @@
 import { createProject, updateProject } from "@/app/services/api";
 import { type Project } from "@/app/types/project";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Input, Textarea } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { montserrat } from "@/app/fonts";
@@ -56,6 +57,11 @@ export default function ProjectForm({
   const [titleError, setTitleError] = useState("");
   const [urlError, setUrlError] = useState("");
 
+  const router = useRouter();
+
+  const submitDisabled =
+    !title || !description || !imageUrl || !!titleError || !!urlError;
+
   const validateTitle = (value: string) => {
     if (value.length > 50) {
       setTitleError("Title must be less than 50 characters");
@@ -86,6 +92,7 @@ export default function ProjectForm({
     } else {
       updateProject(projectData);
     }
+    router.push("/admin");
   };
   return (
     <div css={formContinerStyle}>
@@ -120,12 +127,7 @@ export default function ProjectForm({
         }}
       />
       {urlError && <div css={errorMessageStyle}>{urlError}</div>}
-      <Button
-        onClick={handleSubmit}
-        disabled={
-          !title || !description || !imageUrl || !!titleError || !!urlError
-        }
-      >
+      <Button onClick={handleSubmit} disabled={submitDisabled}>
         {mode === "new" ? "Create Project" : "Update Project"}
       </Button>
     </div>
