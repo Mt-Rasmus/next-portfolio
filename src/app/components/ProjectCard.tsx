@@ -5,6 +5,7 @@ import Image from "next/image";
 import { css } from "@emotion/react";
 import { montserrat } from "@/app/fonts";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { useState } from "react";
 
 const cardContainerStyle = css`
   display: flex;
@@ -87,9 +88,14 @@ const ProjectCard = ({
   onEdit?: () => void;
   onDelete?: () => void;
 }) => {
+  // used for mobile devices to toggle overlay visibility on tap
+  const [overlayVisible, setOverlayVisible] = useState(false);
   const isCloudinary = project.imageUrl.includes("res.cloudinary.com");
   return (
-    <div css={cardContainerStyle}>
+    <div
+      css={cardContainerStyle}
+      onClick={() => mode === "admin" && setOverlayVisible(!overlayVisible)}
+    >
       <div css={imageContainerStyle}>
         {isCloudinary ? (
           <Image
@@ -106,7 +112,7 @@ const ProjectCard = ({
       </div>
       <h1>{project.title}</h1>
       {mode === "admin" && (
-        <div css={overlayStyle}>
+        <div css={[overlayStyle, overlayVisible && { opacity: 1 }]}>
           <button onClick={onEdit}>
             <FaEdit />
           </button>
