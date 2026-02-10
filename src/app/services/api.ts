@@ -38,7 +38,7 @@ export const updateProject = async (project: Project) => {
   return res.json();
 };
 
-export const deleteProject = async (id: number) => {
+export const deleteProject = async (id: string) => {
   const res = await fetch(`${BASE_URL}?id=${id}`, {
     method: "DELETE",
   });
