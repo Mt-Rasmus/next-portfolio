@@ -1,7 +1,7 @@
 import { getProjects } from "@/app/services/api";
-import AdminSection from "@/app/components/AdminSection";
+import AdminPageContent from "@/app/components/AdminPageContent";
 
 export default async function AdminPage() {
   const projects = await getProjects();
-  return <AdminSection projects={projects} />;
+  return <AdminPageContent projects={projects} />;
 }
