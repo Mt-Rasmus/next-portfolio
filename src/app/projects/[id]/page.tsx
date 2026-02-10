@@ -1,4 +1,5 @@
 import { getProjectById } from "@/app/services/api";
+import ProjectPageContent from "@/app/components/ProjectPageContent";
 
 export default async function ProjectPage(props: {
   params: Promise<{ id: string }>;
@@ -9,11 +10,5 @@ export default async function ProjectPage(props: {
   if (!project) {
     return <div>Project not found</div>;
   }
-  return (
-    <div>
-      <h1>{project.title}</h1>
-      <p>{project.description}</p>
-      <img src={project.imageUrl} alt={project.title} />
-    </div>
-  );
+  return <ProjectPageContent project={project} />;
 }
