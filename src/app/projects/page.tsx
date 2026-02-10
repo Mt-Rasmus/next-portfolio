@@ -11,7 +11,7 @@ export default async function Projects() {
     <ProjectGrid>
       {projects.map((project) => (
         <Link key={project.id} href={`/projects/${project.id}`}>
-          <ProjectCard project={project} />
+          <ProjectCard project={project} mode="public" />
         </Link>
       ))}
     </ProjectGrid>
