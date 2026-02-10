@@ -1,20 +1,68 @@
 [
   {
-    "id": "project-1",
-    "title": "Project Alpha",
-    "description": "A project about alpha testing.",
-    "imageUrl": "https://fastly.picsum.photos/id/28/4928/3264.jpg?hmac=GnYF-RnBUg44PFfU5pcw_Qs0ReOyStdnZ8MtQWJqTfA"
+    "id": "backstory",
+    "title": "Backstory",
+    "description": "Backstory is a web-based project that showcases a personal or professional journey using interactive visuals and modern web technologies. It leverages JavaScript, React, and Firebase to create a dynamic and engaging user experience. The project features a visually appealing layout with multiple images and a responsive design. It demonstrates proficiency in frontend development and storytelling through code.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716083/backstory1_tr90dg.png"
   },
   {
-    "id": "project-2",
-    "title": "Project Beta",
-    "description": "https://picsum.photos/id/16/367/267",
-    "imageUrl": "in progress"
+    "id": "climateviz",
+    "title": "ClimateViz",
+    "description": "ClimateViz is a Master Thesis research and development project focused on visualizing the effects of climate change. The end result is a 3D VR climate visualization tool for the HTC Vive, providing an immersive and intuitive user interface. The project involved creating a full user application experience, researching and applying ways to show the effects of climate change on a city, and developing innovative visualization techniques. It highlights skills in Unity, C#, and scientific communication.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716084/climate2_wpenzs.png"
   },
   {
-    "id": "project-3",
-    "title": "Project Gamma",
-    "description": "https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI.",
-    "imageUrl": "not started"
+    "id": "facerecognition",
+    "title": "Face Recognition",
+    "description": "Face Recognition is a MATLAB-based project that explores facial recognition and feature detection techniques. It includes advanced image processing methods, such as using color maps and the YCbCr color space for mouth detection. The project demonstrates the application of computer vision algorithms to real-world problems. It provides visual feedback and explanations for each step in the recognition process.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716084/face1_rmxvh4.png"
+  },
+  {
+    "id": "mazegenerator",
+    "title": "Maze Generator",
+    "description": "Maze Generator is a Unity game that procedurally generates mazes for players to solve. The project focuses on algorithmic maze creation, user interaction, and game design principles. It features a visually engaging interface and smooth gameplay mechanics. The project demonstrates skills in C#, Unity, and procedural content generation.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716085/maze1_kkovl6.png"
+  },
+  {
+    "id": "neat",
+    "title": "NEAT",
+    "description": "NEAT is a 3D driving simulator where cars learn to navigate a track using the NEAT (Neural Evolution through Augmenting Topologies) algorithm. The project simulates neuroevolution, allowing both the weights and topology of neural networks to evolve over time. It provides a visual and interactive way to understand machine learning concepts. The simulator is built with Unity and C#, showcasing advanced AI and simulation techniques.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716083/neat_r4yjek.png"
+  },
+  {
+    "id": "pblog",
+    "title": "PBlog",
+    "description": "PBlog is a personal blogsite built with modern web technologies like React, Redux, and Firebase. It allows users to log in with Google authentication, write and edit blog posts, and manage their personal page. The project emphasizes user experience, security, and real-time data updates. It serves as a comprehensive example of a full-stack web application.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716083/pBlog1_ictc1a.png"
+  },
+  {
+    "id": "piano",
+    "title": "Notes 3D",
+    "description": "Notes 3D is a Bachelor Thesis project that visualizes musical notes in a 3D environment. The application uses WebGL and JavaScript to render interactive piano keys and note animations. It aims to make music theory more accessible and engaging through visual learning. The project demonstrates a blend of creativity, technical skill, and educational focus.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716086/piano1_eugz1k.png"
+  },
+  {
+    "id": "procedural",
+    "title": "Procedural Patterns",
+    "description": "Procedural is a project that generates animal skin patterns using procedural algorithms and WebGL. It explores the intersection of art and technology by simulating natural textures and patterns. The project features real-time rendering and user interaction, allowing for experimentation with different parameters. It highlights skills in graphics programming and creative coding.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716085/procedural1_ogq7lg.png"
+  },
+  {
+    "id": "robbotman",
+    "title": "Rob Botman",
+    "description": "RobBotman is a single-player 2D platformer game developed in Unity. Players control Rob, a robot who must fight off waves of enemy robots using a slingshot motion to fire projectiles. The game includes various power-ups and challenges, providing an engaging gameplay experience. It demonstrates expertise in game mechanics, animation, and Unity development.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716086/rob1_ojkmcc.png"
+  },
+  {
+    "id": "thaweather",
+    "title": "Tha Weather",
+    "description": "ThaWeather is a simple yet powerful weather app built with React and D3.js. It displays weather reports for user-selected locations, including forecasts and detailed timestamped data. The app features a clean and intuitive interface, making weather information easily accessible. It showcases skills in data visualization, API integration, and responsive design.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716086/weather1_dn2uqg.png"
+  },
+  {
+    "id": "vast",
+    "title": "VAST Challenge",
+    "description": "VAST Challenge is a project created for the 2014 Visual Analytics Science and Technology (VAST) Challenge. It focuses on visual data analysis and data mining, tackling complex datasets to uncover insights. The project demonstrates advanced analytical techniques and effective data storytelling. It was developed as part of a course in advanced visual data analysis, highlighting both technical and analytical abilities.",
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716086/vast1_fajto6.png"
   }
 ]
