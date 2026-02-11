@@ -9,71 +9,84 @@ import SmartImage from "./SmartImage";
 const cardContainerStyle = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid var(--primary-dark);
-  background-color: var(--primary-light);
-  height: 220px;
-  justify-content: space-between;
-  border-radius: 12px;
+  background-color: white;
+  height: 280px;
+  border-radius: 16px;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.075);
 
-  transition: transform 0.3s ease-out;
-  animation: growIn 0.3s ease-out;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &:hover {
-    transform: scale(1.05);
-  }
-
-  @keyframes growIn {
-    from {
-      transform: scale(0.8);
+    transform: translateY(-8px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    .project-overlay {
+      opacity: 1;
     }
   }
-  button {
-    font-size: 1.5rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
+
+  &:hover .project-overlay {
+    opacity: 1;
   }
   h1 {
-    font-weight: 300;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-  @media (max-width: 768px) {
-    height: 300px;
-    max-width: 400px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 1.5rem 1rem;
+    color: black;
+    text-align: center;
   }
 `;
 
-const imageContainerStyle = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const imageWrapperStyle = css`
+  width: 100%;
+  border-radius: 0px !important;
   height: 200px;
-  border-radius: 4px;
   overflow: hidden;
+  background-color: white;
+
+  img {
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+  }
 `;
 
 const overlayStyle = css`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   opacity: 0;
   transition: opacity 0.3s ease;
-  &:hover {
-    opacity: 1;
+  z-index: 10;
+  height: 200px;
+
+  button {
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      color: black;
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -95,25 +108,28 @@ const ProjectCard = ({
       css={cardContainerStyle}
       onClick={() => mode === "admin" && setOverlayVisible(!overlayVisible)}
     >
-      <div css={imageContainerStyle}>
+      <div css={imageWrapperStyle}>
         <SmartImage
           src={project.imageUrl}
           alt={project.title}
           width={300}
           height={200}
         />
+        {mode === "admin" && (
+          <div
+            className="project-overlay"
+            css={[overlayStyle, overlayVisible && { opacity: 1 }]}
+          >
+            <button onClick={onEdit}>
+              <FaEdit />
+            </button>
+            <button onClick={onDelete}>
+              <FaTrash />
+            </button>
+          </div>
+        )}
       </div>
       <h1>{project.title}</h1>
-      {mode === "admin" && (
-        <div css={[overlayStyle, overlayVisible && { opacity: 1 }]}>
-          <button onClick={onEdit}>
-            <FaEdit />
-          </button>
-          <button onClick={onDelete}>
-            <FaTrash />
-          </button>
-        </div>
-      )}
     </div>
   );
 };
