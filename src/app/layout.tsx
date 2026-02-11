@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { Provider } from "@/components/ui/provider";
+import EmotionRegistry from "./EmotionRegistry";
 import "./globals.css";
 import { montserrat } from "./fonts";
 
@@ -30,10 +31,12 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable}`}
       >
-        <Provider>
-          <Navbar />
-          {children}
-        </Provider>
+        <EmotionRegistry>
+          <Provider>
+            <Navbar />
+            {children}
+          </Provider>
+        </EmotionRegistry>
       </body>
     </html>
   );
