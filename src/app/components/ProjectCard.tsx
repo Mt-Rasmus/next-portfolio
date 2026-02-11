@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 import { type Project } from "@/app/types/project";
-import Image from "next/image";
 import { css } from "@emotion/react";
 import { montserrat } from "@/app/fonts";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useState } from "react";
+import SmartImage from "./SmartImage";
 
 const cardContainerStyle = css`
   display: flex;
@@ -47,18 +47,6 @@ const imageContainerStyle = css`
   overflow: hidden;
 `;
 
-const imageStyle = css`
-  width: 100%;
-  object-fit: cover;
-  max-width: 300px;
-  height: auto;
-  max-height: 200px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 300px;
-  }
-`;
-
 const overlayStyle = css`
   position: absolute;
   top: 0;
@@ -90,25 +78,18 @@ const ProjectCard = ({
 }) => {
   // used for mobile devices to toggle overlay visibility on tap
   const [overlayVisible, setOverlayVisible] = useState(false);
-  const isCloudinary = project.imageUrl.includes("res.cloudinary.com");
   return (
     <div
       css={cardContainerStyle}
       onClick={() => mode === "admin" && setOverlayVisible(!overlayVisible)}
     >
       <div css={imageContainerStyle}>
-        {isCloudinary ? (
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            width={400}
-            height={300}
-            css={imageStyle}
-          />
-        ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={project.imageUrl} alt={project.title} css={imageStyle} />
-        )}
+        <SmartImage
+          src={project.imageUrl}
+          alt={project.title}
+          width={300}
+          height={200}
+        />
       </div>
       <h1>{project.title}</h1>
       {mode === "admin" && (

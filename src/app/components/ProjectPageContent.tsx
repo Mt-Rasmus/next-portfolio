@@ -2,7 +2,7 @@
 "use client";
 import { Project } from "../types/project";
 import { css } from "@emotion/react";
-import Image from "next/image";
+import SmartImage from "./SmartImage";
 
 const containerStyle = css`
   padding: 2rem;
@@ -17,11 +17,12 @@ const containerStyle = css`
     font-size: 1.15rem;
     margin-bottom: 1.5rem;
   }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+`;
+
+const smartImageStyling = css`
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 `;
 
 export default function ProjectPageContent({ project }: { project: Project }) {
@@ -32,11 +33,12 @@ export default function ProjectPageContent({ project }: { project: Project }) {
     <div css={containerStyle}>
       <h1>{project.title}</h1>
       <p>{project.description}</p>
-      <Image
+      <SmartImage
         src={project.imageUrl}
         alt={project.title}
         width={800}
         height={600}
+        css={smartImageStyling}
       />
     </div>
   );
