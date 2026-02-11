@@ -8,10 +8,10 @@ const styledButtonStyle = css`
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.5rem 1rem;
-  background-color: var(--primary-dark);
+  background-color: var(--foreground);
   width: auto;
   &:hover {
-    background-color: var(--primary-darker);
+    background-color: var(--primary-darkest);
   }
 `;
 

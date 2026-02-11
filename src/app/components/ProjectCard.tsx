@@ -12,12 +12,13 @@ const cardContainerStyle = css`
   align-items: center;
   text-align: center;
   padding: 1rem;
-  border: 5px solid #cdce83;
-  background-color: #ffffff;
+  border: 1px solid var(--primary-dark);
+  background-color: var(--primary-light);
   height: 220px;
   justify-content: space-between;
-  border-radius: 4px;
+  border-radius: 12px;
   position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   transition: transform 0.3s ease-out;
   animation: growIn 0.3s ease-out;
@@ -39,7 +40,7 @@ const cardContainerStyle = css`
     cursor: pointer;
   }
   h1 {
-    font-weight: 500;
+    font-weight: 300;
     margin-top: 1rem;
     font-size: 1.5rem;
   }

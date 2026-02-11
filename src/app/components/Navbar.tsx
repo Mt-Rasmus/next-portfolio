@@ -8,13 +8,16 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   gap: 1rem;
+  background-color: var(--foreground);
+  color: white;
 `;
 
 const NavLink = styled(Link, {
   shouldForwardProp: (prop) => prop !== "isActive",
 })<{ isActive: boolean }>`
   text-decoration: none;
-  color: ${({ isActive }) => (isActive ? "var(--primary-darker)" : "black")};
+  color: ${({ isActive }) =>
+    isActive ? "var(--primary-dark-medium)" : "white"};
   transition: color 0.2s ease;
 
   &:hover {
