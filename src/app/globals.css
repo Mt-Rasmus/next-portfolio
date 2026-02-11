@@ -1,13 +1,9 @@
 :root {
-  --background: #f7f0b8;
+  --primary: #f7f0b8;
+  --primary-light: #fdf7c3;
+  --primary-dark: #d4ba72;
+  --primary-darker: #b6a455;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html,
@@ -20,7 +16,7 @@ body {
   --font-base: var(--font-montserrat);
   --font-header: var(--font-roboto);
   color: var(--foreground);
-  background: var(--background);
+  background: var(--primary);
   font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

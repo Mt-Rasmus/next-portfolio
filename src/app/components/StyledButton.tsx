@@ -2,18 +2,16 @@
 "use client";
 import { Button } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { montserrat } from "@/app/fonts";
 
 const styledButtonStyle = css`
-  font-family: ${montserrat.style.fontFamily};
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.5rem 1rem;
-  background-color: #bbba76;
+  background-color: var(--primary-dark);
   width: auto;
   &:hover {
-    background-color: #a9a85f;
+    background-color: var(--primary-darker);
   }
 `;
 

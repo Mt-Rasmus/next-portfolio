@@ -2,7 +2,7 @@
 "use client";
 import Image from "next/image";
 import { css, keyframes } from "@emotion/react";
-import { montserrat, roboto } from "@/app/fonts";
+import { roboto } from "@/app/fonts";
 import { motion } from "framer-motion";
 
 const containerStyle = css`
@@ -13,10 +13,9 @@ const containerStyle = css`
   justify-content: center;
   text-align: start;
   padding: 2rem;
-  background-color: #fdf7c3;
+  background-color: var(--primary-light);
 
   h1 {
-    font-family: ${montserrat.style.fontFamily};
     font-weight: 400;
     font-size: 2.5rem;
     margin-bottom: 1rem;

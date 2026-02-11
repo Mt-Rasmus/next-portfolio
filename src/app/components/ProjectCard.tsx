@@ -2,7 +2,6 @@
 "use client";
 import { type Project } from "@/app/types/project";
 import { css } from "@emotion/react";
-import { montserrat } from "@/app/fonts";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import SmartImage from "./SmartImage";
@@ -27,7 +26,6 @@ const cardContainerStyle = css`
     cursor: pointer;
   }
   h1 {
-    font-family: ${montserrat.style.fontFamily};
     font-weight: 500;
     margin-top: 1rem;
     font-size: 1.5rem;

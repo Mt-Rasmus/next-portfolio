@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { Input, Textarea } from "@chakra-ui/react";
 import StyledButton from "./StyledButton";
 import { css } from "@emotion/react";
-import { montserrat } from "@/app/fonts";
 
 const formContinerStyle = css`
   display: flex;
@@ -16,22 +15,11 @@ const formContinerStyle = css`
   padding: 0 2rem;
   max-width: 600px;
   margin: 2rem auto;
-  font-family: ${montserrat.style.fontFamily};
-  button {
-    font-family: ${montserrat.style.fontFamily};
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: #bbba76;
-    &:hover {
-      background-color: #a9a85f;
-    }
-  }
 `;
 
 const formInputStyle = css`
   padding: 0.5rem;
-  border: 1px solid #bbba76;
+  border: 1px solid var(--primary-dark);
   outline: none;
   background-color: white;
   border-radius: 4px;

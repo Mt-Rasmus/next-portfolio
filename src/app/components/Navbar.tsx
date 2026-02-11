@@ -3,12 +3,14 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 
 const Section = styled.section`
-  background: #1ed4d4;
+  background: var(--primary-darker);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
   color: #fff;
   display: flex;
   gap: 1rem;
 `;
-
 const Navbar = () => {
   return (
     <Section>

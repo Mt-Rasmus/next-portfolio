@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
 import { AboutItem } from "@/app/types/about";
-import { montserrat, roboto } from "@/app/fonts";
+import { roboto } from "@/app/fonts";
 
 export default function AboutCard({
   item: { title, description, image, direction, imageOrientation },
@@ -84,7 +84,6 @@ export default function AboutCard({
     max-width: 370px;
     text-align: left;
     h2 {
-      font-family: ${montserrat.style.fontFamily};
       font-weight: 400;
       font-size: 2rem;
       margin-bottom: 0.5rem;
