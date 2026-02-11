@@ -13,7 +13,7 @@ const containerStyle = css`
   justify-content: center;
   text-align: start;
   padding: 3.5rem 2rem;
-
+  height: 100vh;
   h1 {
     font-weight: 400;
     font-size: 2.5rem;
