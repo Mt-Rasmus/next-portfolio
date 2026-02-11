@@ -21,7 +21,6 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
 `;
 
 const navLinkData = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/admin", label: "Admin" },
