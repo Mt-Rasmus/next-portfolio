@@ -106,13 +106,15 @@ export default function AboutCard({
   `;
 
   const dividerStyle = css`
-    border: none;
-    height: 1px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   `;
 
   return (
     <div>
+      <div css={dividerStyle} />
       <div ref={ref} css={containerStyle}>
         <div css={textStyle}>
           <h2>{title}</h2>
@@ -126,7 +128,6 @@ export default function AboutCard({
           css={imageStyle}
         />
       </div>
-      <hr css={dividerStyle} />
     </div>
   );
 }

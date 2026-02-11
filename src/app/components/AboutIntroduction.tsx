@@ -12,7 +12,7 @@ const containerStyle = css`
   align-items: center;
   justify-content: center;
   text-align: start;
-  padding: 2rem;
+  padding: 3.5rem 2rem;
 
   h1 {
     font-weight: 400;
@@ -73,7 +73,7 @@ const fadeInStyle = css`
 const dividerStyle = css`
   border: none;
   height: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.001);
 `;
 
 const name = "Hi, I’m Rasmus";
