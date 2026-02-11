@@ -10,7 +10,9 @@ const Section = styled.section`
   gap: 1rem;
 `;
 
-const NavLink = styled(Link)<{ isActive: boolean }>`
+const NavLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== "isActive",
+})<{ isActive: boolean }>`
   text-decoration: none;
   color: ${({ isActive }) => (isActive ? "var(--primary-darker)" : "black")};
   transition: color 0.2s ease;
