@@ -18,6 +18,19 @@ const cardContainerStyle = css`
   justify-content: space-between;
   border-radius: 4px;
   position: relative;
+
+  transition: transform 0.3s ease-out;
+  animation: growIn 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @keyframes growIn {
+    from {
+      transform: scale(0.8);
+    }
+  }
   button {
     font-size: 1.5rem;
     color: white;
