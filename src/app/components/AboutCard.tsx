@@ -8,10 +8,10 @@ import { roboto } from "@/app/fonts";
 
 export default function AboutCard({
   item: { title, description, image, direction, imageOrientation },
-  isLastItem,
+  lighterBackground,
 }: {
   item: AboutItem;
-  isLastItem: boolean;
+  lighterBackground: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -51,26 +51,31 @@ export default function AboutCard({
     justify-content: center;
     padding: 4rem 2rem;
     gap: 1rem;
+    background-color: ${lighterBackground && "var(--primary-light)"};
   `;
 
   const imageStyle = css`
-    ${imageOrientation === "portrait"
-      ? `
+    ${
+      imageOrientation === "portrait"
+        ? `
         height: 400px; 
         width: auto;
       `
-      : `
+        : `
         width: 400px; 
         height: auto;
-      `}
+      `
+    }
 
-    transform: ${!isMobile
-      ? isVisible
-        ? "translateX(0)"
-        : direction === "right"
-          ? "translateX(200px)"
-          : "translateX(-200px)"
-      : "none"};
+    transform: ${
+      !isMobile
+        ? isVisible
+          ? "translateX(0)"
+          : direction === "right"
+            ? "translateX(200px)"
+            : "translateX(-200px)"
+        : "none"
+    };
     opacity: ${isVisible ? 1 : 0};
     transition:
       transform 0.6s ease-out,
@@ -78,6 +83,10 @@ export default function AboutCard({
     border-radius: 4px;
     margin: 0 1rem 0 1rem;
     flex-shrink: 0;
+      @media (max-width: 768px) {
+        margin-top: 1rem;
+      }
+    }
   `;
 
   const textStyle = css`
@@ -98,7 +107,8 @@ export default function AboutCard({
 
   const dividerStyle = css`
     border: none;
-    border-top: ${isLastItem ? "none" : "1px solid #d1d087"};
+    height: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   `;
 
   return (

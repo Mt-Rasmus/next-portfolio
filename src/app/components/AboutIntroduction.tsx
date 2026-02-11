@@ -13,7 +13,6 @@ const containerStyle = css`
   justify-content: center;
   text-align: start;
   padding: 2rem;
-  background-color: var(--primary-light);
 
   h1 {
     font-weight: 400;
@@ -27,6 +26,16 @@ const containerStyle = css`
     font-size: 1.2rem;
     line-height: 1.6;
     max-width: 600px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    img {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
 `;
 
@@ -59,6 +68,12 @@ const fadeInStyle = css`
       opacity: 1;
     }
   }
+`;
+
+const dividerStyle = css`
+  border: none;
+  height: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const name = "Hi, I’m Rasmus";
@@ -94,7 +109,7 @@ export default function AboutIntroduction() {
           </p>
         </div>
       </div>
-      {/* <div>Here are some things I like to do in my day</div> */}
+      <hr css={dividerStyle} />
     </div>
   );
 }

@@ -47,7 +47,7 @@ const AboutPage = () => {
         <AboutCard
           key={index}
           item={item}
-          isLastItem={index === aboutData.length - 1}
+          lighterBackground={index % 2 === 0}
         />
       ))}
     </div>
