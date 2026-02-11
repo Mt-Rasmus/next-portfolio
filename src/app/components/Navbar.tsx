@@ -1,25 +1,47 @@
 "use client";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { usePathname } from "next/navigation";
 
 const Section = styled.section`
-  background: var(--primary-darker);
   padding: 1rem;
   display: flex;
   justify-content: center;
-  color: #fff;
-  display: flex;
   gap: 1rem;
 `;
-const Navbar = () => {
+
+const NavLink = styled(Link)<{ isActive: boolean }>`
+  text-decoration: none;
+  color: ${({ isActive }) => (isActive ? "var(--primary-darker)" : "black")};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--primary-darker);
+  }
+`;
+
+const navLinkData = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/admin", label: "Admin" },
+];
+
+function Navbar() {
+  const pathname = usePathname();
+
   return (
     <Section>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/projects">Projects</Link>
-      <Link href="/admin">Admin</Link>
+      {navLinkData.map((link) => (
+        <NavLink
+          key={link.href}
+          href={link.href}
+          isActive={pathname === link.href}
+        >
+          {link.label}
+        </NavLink>
+      ))}
     </Section>
   );
-};
-
+}
 export default Navbar;
