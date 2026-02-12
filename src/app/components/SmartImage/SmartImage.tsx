@@ -34,6 +34,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
         width={width}
         height={height}
         className={className}
+        priority
       />
     );
   }
