@@ -112,12 +112,14 @@ const ProjectCard = ({
       onClick={() => mode === "admin" && setOverlayVisible(!overlayVisible)}
     >
       <div css={imageWrapperStyle}>
-        <SmartImage
-          src={project.imageUrl}
-          alt={project.title}
-          width={300}
-          height={200}
-        />
+        {project.imageUrl && (
+          <SmartImage
+            src={project.imageUrl}
+            alt={project.title}
+            width={300}
+            height={200}
+          />
+        )}
         {mode === "admin" && (
           <div
             className="project-overlay"

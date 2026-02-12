@@ -15,6 +15,9 @@ const formContinerStyle = css`
   padding: 0 2rem;
   max-width: 600px;
   margin: 2rem auto;
+  textarea {
+    min-height: 10rem;
+  }
 `;
 
 const formInputStyle = css`
@@ -48,8 +51,7 @@ export default function ProjectForm({
 
   const router = useRouter();
 
-  const submitDisabled =
-    !title || !description || !imageUrl || !!titleError || !!urlError;
+  const submitDisabled = !title || !description || !!titleError || !!urlError;
 
   const validateTitle = (value: string) => {
     if (value.length > 50) {
@@ -61,6 +63,10 @@ export default function ProjectForm({
 
   const validateUrl = (value: string) => {
     try {
+      if (value === "") {
+        setUrlError("");
+        return;
+      }
       new URL(value);
       setUrlError("");
     } catch {
@@ -107,7 +113,7 @@ export default function ProjectForm({
       <Input
         type="text"
         name="imageUrl"
-        placeholder="Image URL"
+        placeholder="Image URL (optional)"
         value={imageUrl}
         css={formInputStyle}
         onChange={(e) => {
