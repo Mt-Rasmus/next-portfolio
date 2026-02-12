@@ -49,6 +49,9 @@ const signatureImageStyle = css`
   left: 1.375rem;
   bottom: 0.8rem;
   height: auto;
+  width: auto;
+  max-width: 135px;
+  object-fit: contain;
 `;
 
 const NavLink = styled(Link, {
