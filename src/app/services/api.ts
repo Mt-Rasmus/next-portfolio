@@ -1,9 +1,16 @@
 import { Project } from "../types/project";
 
+/**
+ * Client-side API service for admin operations
+ * Uses fetch with cache: 'no-store' for admin operations to ensure fresh data
+ */
+
 const BASE_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/projects`;
 
 export const getProjectById = async (id: string): Promise<Project | null> => {
-  const response = await fetch(BASE_URL);
+  const response = await fetch(BASE_URL, {
+    cache: "no-store", // Always fetch fresh data for dynamic pages
+  });
   if (!response.ok) {
     throw new Error("Failed to fetch projects");
   }
@@ -12,7 +19,9 @@ export const getProjectById = async (id: string): Promise<Project | null> => {
 };
 
 export const getProjects = async (): Promise<Project[]> => {
-  const response = await fetch(BASE_URL);
+  const response = await fetch(BASE_URL, {
+    cache: "no-store", // Always fetch fresh data for admin
+  });
   if (!response.ok) {
     throw new Error("Failed to fetch projects");
   } else {

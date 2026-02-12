@@ -1,6 +1,20 @@
 import AboutIntroduction from "@/app/components/AboutIntroduction";
 import AboutCard from "@/app/components/AboutCard";
 import { type AboutItem } from "@/app/types/about";
+import type { Metadata } from "next";
+
+/**
+ * RENDERING STRATEGY: Static Site Generation (SSG)
+ * - Pure static content with no dynamic data fetching
+ * - Pre-rendered at build time for maximum performance
+ * - Results in instant page loads and best SEO
+ */
+
+export const metadata: Metadata = {
+  title: "About | Portfolio Rasmus Ståhl",
+  description:
+    "Learn about Rasmus Ståhl - web developer, animator, and outdoor enthusiast based in Amsterdam.",
+};
 
 const BASE_IMAGE_PATH = "/about";
 
