@@ -26,7 +26,7 @@ const Year = styled.span`
   position: absolute;
   right: 1rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: white;
 `;
 

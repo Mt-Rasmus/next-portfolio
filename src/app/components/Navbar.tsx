@@ -44,10 +44,10 @@ const SocialsContainer = styled.div`
   }
 `;
 
-const imageStyle = css`
+const signatureImageStyle = css`
   position: absolute;
   left: 1.375rem;
-  bottom: 0.55rem;
+  bottom: 0.8rem;
   height: auto;
 `;
 
@@ -93,7 +93,7 @@ const Navbar = () => {
         alt="Rasmus Ståhl"
         width={135}
         height={100}
-        css={imageStyle}
+        css={signatureImageStyle}
       />
       <NavContainer>
         {navLinkData.map((link) => (
