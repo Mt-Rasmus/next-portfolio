@@ -4,8 +4,9 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import { usePathname } from "next/navigation";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+import MobileMenu from "./MobileMenu";
+import Socials from "./Socials";
 
 const Section = styled.section`
   position: relative;
@@ -21,6 +22,10 @@ const NavContainer = styled.div`
   gap: 1rem;
   justify-content: center;
   flex: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SocialsContainer = styled.div`
@@ -30,18 +35,9 @@ const SocialsContainer = styled.div`
   transform: translateY(-50%);
   display: flex;
   gap: 0.75rem;
-`;
 
-const SocialLink = styled.a`
-  color: white;
-  font-size: 1.25rem;
-  margin: 0 0.15rem;
-  transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    color: var(--primary-darker);
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -94,26 +90,9 @@ function Navbar() {
         ))}
       </NavContainer>
       <SocialsContainer>
-        <SocialLink
-          href="https://github.com/Mt-Rasmus"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <FaGithub />
-        </SocialLink>
-        <SocialLink
-          href="https://linkedin.com/in/rasmus-ståhl"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
-        </SocialLink>
-        <SocialLink href="mailto:rasmus.stahl.47@gmail.com" aria-label="Email">
-          <FaEnvelope />
-        </SocialLink>
+        <Socials />
       </SocialsContainer>
+      <MobileMenu links={navLinkData} currentPath={pathname} />
     </Section>
   );
 }

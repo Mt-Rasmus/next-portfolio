@@ -42,6 +42,9 @@ const cardContainerStyle = css`
     color: black;
     text-align: center;
   }
+  @media (max-width: 768px) {
+    width: 25rem;
+  }
 `;
 
 const imageWrapperStyle = css`
