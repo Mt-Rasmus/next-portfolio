@@ -1,8 +1,11 @@
+/** @jsxImportSource @emotion/react */
 "use client";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { usePathname } from "next/navigation";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Image from "next/image";
 
 const Section = styled.section`
   position: relative;
@@ -42,6 +45,13 @@ const SocialLink = styled.a`
   }
 `;
 
+const imageStyle = css`
+  position: absolute;
+  left: 1.375rem;
+  bottom: 0.55rem;
+  height: auto;
+`;
+
 const NavLink = styled(Link, {
   shouldForwardProp: (prop) => prop !== "isActive",
 })<{ isActive: boolean }>`
@@ -65,6 +75,13 @@ function Navbar() {
 
   return (
     <Section>
+      <Image
+        src={"/name.png"}
+        alt="Rasmus Ståhl"
+        width={135}
+        height={100}
+        css={imageStyle}
+      />
       <NavContainer>
         {navLinkData.map((link) => (
           <NavLink

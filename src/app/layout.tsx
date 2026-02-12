@@ -18,8 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Portfolio Rasmus Ståhl",
   description: "Simple portfolio site showing off some of my projects.",
+  icons: {
+    icon: "/r2.png",
+  },
 };
 
 export default function RootLayout({

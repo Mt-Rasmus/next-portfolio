@@ -31,6 +31,7 @@ const containerStyle = css`
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    height: auto;
 
     img {
       margin-right: 0;

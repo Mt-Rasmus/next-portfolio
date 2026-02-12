@@ -1,4 +1,3 @@
-// src/fonts.ts
 import { Montserrat, Roboto } from "next/font/google";
 
 export const montserrat = Montserrat({
