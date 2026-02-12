@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { SerializedStyles } from "@emotion/react";
 
 type SmartImageProps = {
   src: string;
@@ -8,7 +7,6 @@ type SmartImageProps = {
   width: number;
   height: number;
   className?: string;
-  css?: SerializedStyles;
 };
 
 const isTrustedImageSource = (src: string) => {
