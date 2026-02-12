@@ -4,7 +4,7 @@ import { type Project } from "@/app/types/project";
 import { css } from "@emotion/react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useState } from "react";
-import SmartImage from "./SmartImage";
+import SmartImage from "../SmartImage/SmartImage";
 
 const cardContainerStyle = css`
   display: flex;

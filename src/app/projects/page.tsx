@@ -1,7 +1,7 @@
 import { getStoredProjects } from "@/app/api/projects/route";
-import ProjectCard from "@/app/components/ProjectCard";
+import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
 import Link from "next/link";
-import ProjectGrid from "@/app/components/ProjectGrid";
+import ProjectGrid from "@/app/components/ProjectGrid/ProjectGrid";
 import type { Metadata } from "next";
 
 /**

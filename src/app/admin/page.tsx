@@ -1,5 +1,5 @@
 import { getProjects } from "@/app/services/api";
-import AdminPageContent from "@/app/components/AdminPageContent";
+import AdminPageContent from "@/app/components/AdminPageContent/AdminPageContent";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 

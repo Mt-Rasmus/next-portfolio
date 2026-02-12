@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import StyledButton from "@/app/components/StyledButton";
+import StyledButton from "@/app/components/StyledButton/StyledButton";
 import Link from "next/link";
 import { css } from "@emotion/react";
-import AdminProjects from "../admin/AdminProjects";
-import { Project } from "../types/project";
+import AdminProjects from "../../admin/AdminProjects";
+import { Project } from "../../types/project";
 
 const containerStyle = css`
   padding: 2rem;

@@ -5,7 +5,7 @@ import { type Project } from "@/app/types/project";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input, Textarea } from "@chakra-ui/react";
-import StyledButton from "./StyledButton";
+import StyledButton from "../StyledButton/StyledButton";
 import { css } from "@emotion/react";
 
 const formContinerStyle = css`

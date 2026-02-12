@@ -6,8 +6,8 @@ import { css } from "@emotion/react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import MobileMenu from "./MobileMenu";
-import Socials from "./Socials";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Socials from "../Socials/Socials";
 
 const Section = styled.section`
   position: relative;

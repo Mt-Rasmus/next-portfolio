@@ -1,7 +1,7 @@
 "use client";
 import { deleteProject } from "@/app/services/api";
-import ProjectGrid from "../components/ProjectGrid";
-import ProjectCard from "../components/ProjectCard";
+import ProjectGrid from "../components/ProjectGrid/ProjectGrid";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
 import { useRouter } from "next/navigation";
 import { Project } from "../types/project";
 import { useState } from "react";

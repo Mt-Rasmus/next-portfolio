@@ -1,4 +1,4 @@
-import ProjectForm from "@/app/components/ProjectForm";
+import ProjectForm from "@/app/components/ProjectForm/ProjectForm";
 
 /**
  * RENDERING STRATEGY: Static Site Generation (SSG)

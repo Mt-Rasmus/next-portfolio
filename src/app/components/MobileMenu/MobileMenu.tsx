@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-import Socials from "./Socials";
+import Socials from "../Socials/Socials";
 
 const Wrapper = styled.div`
   display: none;

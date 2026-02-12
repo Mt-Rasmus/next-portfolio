@@ -1,5 +1,5 @@
-import AboutIntroduction from "@/app/components/AboutIntroduction";
-import AboutCard from "@/app/components/AboutCard";
+import AboutIntroduction from "@/app/components/AboutIntroduction/AboutIntroduction";
+import AboutCard from "@/app/components/AboutCard/AboutCard";
 import { type AboutItem } from "@/app/types/about";
 import type { Metadata } from "next";
 

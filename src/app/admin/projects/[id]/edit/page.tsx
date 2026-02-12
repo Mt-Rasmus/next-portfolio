@@ -1,4 +1,4 @@
-import ProjectForm from "@/app/components/ProjectForm";
+import ProjectForm from "@/app/components/ProjectForm/ProjectForm";
 import { getProjectById } from "@/app/services/api";
 
 /**

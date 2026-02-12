@@ -1,5 +1,5 @@
 import { getProjectById } from "@/app/services/api";
-import ProjectPageContent from "@/app/components/ProjectPageContent";
+import ProjectPageContent from "@/app/components/ProjectPageContent/ProjectPageContent";
 import { getStoredProjects } from "@/app/api/projects/route";
 /**
  * RENDERING STRATEGY: Static Site Generation (SSG) with ISR

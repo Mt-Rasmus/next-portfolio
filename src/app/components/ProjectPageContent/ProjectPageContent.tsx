@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import { Project } from "../types/project";
+import { Project } from "../../types/project";
 import { css } from "@emotion/react";
-import SmartImage from "./SmartImage";
+import SmartImage from "../SmartImage/SmartImage";
 
 const containerStyle = css`
   padding: 2rem;

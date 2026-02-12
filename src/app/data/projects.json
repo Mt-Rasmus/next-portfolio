@@ -6,16 +6,10 @@
     "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716083/backstory1_tr90dg.png"
   },
   {
-    "id": "climateviz",
-    "title": "ClimateViz",
-    "description": "ClimateViz is a Master Thesis research and development project focused on visualizing the effects of climate change. The end result is a 3D VR climate visualization tool for the HTC Vive, providing an immersive and intuitive user interface. The project involved creating a full user application experience, researching and applying ways to show the effects of climate change on a city, and developing innovative visualization techniques. It highlights skills in Unity, C#, and scientific communication.",
-    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716084/climate2_wpenzs.png"
-  },
-  {
-    "id": "facerecognition",
-    "title": "Face Recognition",
+    "title": "Face Recognitionnnnn",
     "description": "Face Recognition is a MATLAB-based project that explores facial recognition and feature detection techniques. It includes advanced image processing methods, such as using color maps and the YCbCr color space for mouth detection. The project demonstrates the application of computer vision algorithms to real-world problems. It provides visual feedback and explanations for each step in the recognition process.",
-    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716084/face1_rmxvh4.png"
+    "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716084/face1_rmxvh4.png",
+    "id": "facerecognition"
   },
   {
     "id": "mazegenerator",
@@ -64,5 +58,11 @@
     "title": "VAST Challenge",
     "description": "VAST Challenge is a project created for the 2014 Visual Analytics Science and Technology (VAST) Challenge. It focuses on visual data analysis and data mining, tackling complex datasets to uncover insights. The project demonstrates advanced analytical techniques and effective data storytelling. It was developed as part of a course in advanced visual data analysis, highlighting both technical and analytical abilities.",
     "imageUrl": "https://res.cloudinary.com/dyirlocip/image/upload/v1770716086/vast1_fajto6.png"
+  },
+  {
+    "title": "sadsad",
+    "description": "asdasdsad",
+    "imageUrl": "",
+    "id": "3f2b8ad5-cfe3-443d-b8fb-2446a817ab8e"
   }
 ]
