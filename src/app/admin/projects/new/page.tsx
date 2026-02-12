@@ -1,5 +1,7 @@
 import ProjectForm from "@/app/components/ProjectForm";
 
-export default function NewProjectPage() {
+const NewProjectPage = () => {
   return <ProjectForm mode="new" />;
-}
+};
+
+export default NewProjectPage;

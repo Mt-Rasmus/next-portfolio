@@ -7,10 +7,12 @@ const isUserAuthenticated = () => {
   return true;
 };
 
-export default async function AdminPage() {
+const AdminPage = async () => {
   if (!isUserAuthenticated()) {
     redirect("/");
   }
   const projects = await getProjects();
   return <AdminPageContent projects={projects} />;
-}
+};
+
+export default AdminPage;

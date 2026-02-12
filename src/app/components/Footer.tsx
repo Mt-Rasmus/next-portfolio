@@ -43,7 +43,7 @@ const SocialLink = styled.a`
   }
 `;
 
-function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <Section>
@@ -71,5 +71,6 @@ function Footer() {
       <Year>© {currentYear}</Year>
     </Section>
   );
-}
+};
+
 export default Footer;

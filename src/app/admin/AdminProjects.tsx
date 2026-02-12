@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Project } from "../types/project";
 import { useState } from "react";
 
-export default function AdminPage({ projects }: { projects: Project[] }) {
+const AdminProjects = ({ projects }: { projects: Project[] }) => {
   const router = useRouter();
 
   const [projectList, setProjectList] = useState<Project[]>(projects);
@@ -35,4 +35,6 @@ export default function AdminPage({ projects }: { projects: Project[] }) {
       </ProjectGrid>
     </div>
   );
-}
+};
+
+export default AdminProjects;

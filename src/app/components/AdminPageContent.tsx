@@ -13,7 +13,7 @@ const containerStyle = css`
   align-items: center;
 `;
 
-export default function AdminPageClient({ projects }: { projects: Project[] }) {
+const AdminPageContent = ({ projects }: { projects: Project[] }) => {
   return (
     <div css={containerStyle}>
       <Link href="/admin/projects/new" passHref>
@@ -22,4 +22,6 @@ export default function AdminPageClient({ projects }: { projects: Project[] }) {
       <AdminProjects projects={projects} />
     </div>
   );
-}
+};
+
+export default AdminPageContent;

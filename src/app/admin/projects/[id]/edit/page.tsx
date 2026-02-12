@@ -1,9 +1,7 @@
 import ProjectForm from "@/app/components/ProjectForm";
 import { getProjectById } from "@/app/services/api";
 
-export default async function EditProjectPage(props: {
-  params: Promise<{ id: string }>;
-}) {
+const EditProjectPage = async (props: { params: Promise<{ id: string }> }) => {
   const { id } = await props.params;
   const project = await getProjectById(id);
 
@@ -12,4 +10,6 @@ export default async function EditProjectPage(props: {
   }
 
   return <ProjectForm mode="edit" project={project} />;
-}
+};
+
+export default EditProjectPage;

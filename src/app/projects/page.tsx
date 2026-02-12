@@ -5,7 +5,7 @@ import ProjectGrid from "@/app/components/ProjectGrid";
 
 export const revalidate = 60;
 
-export default async function Projects() {
+const Projects = async () => {
   const projects = await getStoredProjects();
   return (
     <ProjectGrid>
@@ -16,4 +16,6 @@ export default async function Projects() {
       ))}
     </ProjectGrid>
   );
-}
+};
+
+export default Projects;

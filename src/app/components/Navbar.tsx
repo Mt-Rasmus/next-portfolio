@@ -68,7 +68,7 @@ const isUserAuthenticated = () => {
   return true;
 };
 
-function Navbar() {
+const Navbar = () => {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const isAuthenticated = isUserAuthenticated();
@@ -112,5 +112,6 @@ function Navbar() {
       {isMobile && <MobileMenu links={navLinkData} currentPath={pathname} />}
     </Section>
   );
-}
+};
+
 export default Navbar;
