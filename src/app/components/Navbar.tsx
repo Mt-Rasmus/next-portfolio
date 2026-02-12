@@ -63,15 +63,21 @@ const NavLink = styled(Link, {
   }
 `;
 
-const navLinkData = [
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/admin", label: "Admin" },
-];
+// Placeholder for authentication logic
+const isUserAuthenticated = () => {
+  return true;
+};
 
 function Navbar() {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
+  const isAuthenticated = isUserAuthenticated();
+
+  const navLinkData = [
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    ...(isAuthenticated ? [{ href: "/admin", label: "Admin" }] : []),
+  ];
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
