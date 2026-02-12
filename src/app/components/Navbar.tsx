@@ -5,13 +5,16 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 import Socials from "./Socials";
 
 const Section = styled.section`
   position: relative;
   padding: 1rem;
+  min-height: 4rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: var(--foreground);
   color: white;
@@ -68,11 +71,19 @@ const navLinkData = [
 
 function Navbar() {
   const pathname = usePathname();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <Section>
       <Image
-        src={"/name.png"}
+        src="/name.png"
         alt="Rasmus Ståhl"
         width={135}
         height={100}
@@ -92,7 +103,7 @@ function Navbar() {
       <SocialsContainer>
         <Socials />
       </SocialsContainer>
-      <MobileMenu links={navLinkData} currentPath={pathname} />
+      {isMobile && <MobileMenu links={navLinkData} currentPath={pathname} />}
     </Section>
   );
 }
