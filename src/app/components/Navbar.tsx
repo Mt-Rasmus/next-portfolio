@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styled from "@emotion/styled";
 import { usePathname } from "next/navigation";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Section = styled.section`
   position: relative;
@@ -93,8 +93,8 @@ function Navbar() {
         >
           <FaLinkedin />
         </SocialLink>
-        <SocialLink aria-label="Twitter">
-          <FaTwitter />
+        <SocialLink href="mailto:rasmus.stahl.47@gmail.com" aria-label="Email">
+          <FaEnvelope />
         </SocialLink>
       </SocialsContainer>
     </Section>

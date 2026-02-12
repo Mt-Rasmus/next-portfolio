@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Provider } from "@/components/ui/provider";
 import EmotionRegistry from "./EmotionRegistry";
 import "./globals.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Provider>
             <Navbar />
             {children}
+            <Footer />
           </Provider>
         </EmotionRegistry>
       </body>
