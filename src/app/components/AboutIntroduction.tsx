@@ -56,7 +56,7 @@ const imageStyle = css`
   max-height: 500px;
   width: auto;
   margin-right: 3rem;
-  animation: ${slideIn} 0.8s ease-out forwards;
+  animation: ${slideIn} 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 `;
 
 const fadeInStyle = css`

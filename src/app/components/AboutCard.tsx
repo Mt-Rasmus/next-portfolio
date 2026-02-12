@@ -78,8 +78,8 @@ export default function AboutCard({
     };
     opacity: ${isVisible ? 1 : 0};
     transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
+      transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+      opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
     border-radius: 4px;
     margin: 0 1rem 0 1rem;
     flex-shrink: 0;

@@ -38,7 +38,7 @@ export default function RootLayout({
         <EmotionRegistry>
           <Provider>
             <Navbar />
-            {children}
+            <main>{children}</main>
             <Footer />
           </Provider>
         </EmotionRegistry>
