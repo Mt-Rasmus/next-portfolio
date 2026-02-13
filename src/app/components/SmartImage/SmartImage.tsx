@@ -1,5 +1,7 @@
+/** @jsxImportSource @emotion/react */
 import Image from "next/image";
 import React from "react";
+import { css } from "@emotion/react";
 
 type SmartImageProps = {
   src: string;
@@ -7,7 +9,17 @@ type SmartImageProps = {
   width: number;
   height: number;
   className?: string;
+  priority?: boolean;
+  blurDataURL?: string;
 };
+
+const imageStyle = css`
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+  border-radius: inherit;
+`;
 
 const isTrustedImageSource = (src: string) => {
   try {
@@ -24,6 +36,8 @@ const SmartImage: React.FC<SmartImageProps> = ({
   width,
   height,
   className,
+  priority = false,
+  blurDataURL,
 }) => {
   const isTrusted = isTrustedImageSource(src);
   if (isTrusted) {
@@ -34,7 +48,10 @@ const SmartImage: React.FC<SmartImageProps> = ({
         width={width}
         height={height}
         className={className}
-        priority
+        css={imageStyle}
+        priority={priority}
+        placeholder={blurDataURL ? "blur" : undefined}
+        blurDataURL={blurDataURL}
       />
     );
   }

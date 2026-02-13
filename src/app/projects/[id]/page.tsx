@@ -1,6 +1,7 @@
 import { getProjectById } from "@/app/services/api";
 import ProjectPageContent from "@/app/components/ProjectPageContent/ProjectPageContent";
 import { getStoredProjects } from "@/app/api/projects/route";
+import { getImage } from "@/helpers/getImage";
 /**
  * RENDERING STRATEGY: Static Site Generation (SSG) with ISR
  * - Uses generateStaticParams to pre-render all project pages at build time
@@ -23,7 +24,28 @@ const ProjectPage = async (props: { params: Promise<{ id: string }> }) => {
   if (!project) {
     return <div>Project not found</div>;
   }
-  return <ProjectPageContent project={project} />;
+
+  // Generate blur placeholder for images
+  let blurDataURL: string | undefined;
+  let imageWidth: number | undefined;
+  let imageHeight: number | undefined;
+  try {
+    const imageData = await getImage(project.imageUrl);
+    blurDataURL = imageData.base64;
+    imageWidth = imageData.img.width;
+    imageHeight = imageData.img.height;
+  } catch (error) {
+    console.error("Failed to generate blur placeholder:", error);
+  }
+
+  return (
+    <ProjectPageContent
+      project={project}
+      blurDataURL={blurDataURL}
+      imageWidth={imageWidth}
+      imageHeight={imageHeight}
+    />
+  );
 };
 
 export default ProjectPage;

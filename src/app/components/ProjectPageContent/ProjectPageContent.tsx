@@ -25,7 +25,17 @@ const smartImageStyling = css`
   border-radius: 4px;
 `;
 
-export default function ProjectPageContent({ project }: { project: Project }) {
+export default function ProjectPageContent({
+  project,
+  blurDataURL,
+  imageWidth,
+  imageHeight,
+}: {
+  project: Project;
+  blurDataURL?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+}) {
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -36,8 +46,10 @@ export default function ProjectPageContent({ project }: { project: Project }) {
       <SmartImage
         src={project.imageUrl}
         alt={project.title}
-        width={800}
-        height={600}
+        width={imageWidth || 800}
+        height={imageHeight || 600}
+        blurDataURL={blurDataURL}
+        priority
         css={smartImageStyling}
       />
     </div>
